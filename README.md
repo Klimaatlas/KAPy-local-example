@@ -1,8 +1,8 @@
 # Tino Pai - a KAPy example repository
 
-This repository provides a basic example of how the KAPy workflow can be used as part of a larger cliamte service project. 
+This repository provides a basic example of how the [KAPy workflow](https://github.com/Klimaatlas/KAPy/) can be used as part of a larger cliamte service project. 
 
-To start with, let us assume that we have want to setup our own climate serivce processing chain, using KAPy as the main engine, with our configuration and local scripts place under version control in Git. For the sake of argument, we will refer to this project as `TinoPai`. The follow steps describe how the repository that you can see here was setup - by reproducing them on your own machine, you should be able to create your own local configuration.
+To start with, let us assume that we have want to setup our own climate serivce processing chain, using [KAPy](https://github.com/Klimaatlas/KAPy/) as the main engine, with our configuration and local scripts place under version control in Git. For the sake of argument, we will refer to this project as `TinoPai`. The follow steps describe how the repository that you can see here was setup - by reproducing them on your own machine, you should be able to create your own local configuration.
 
 1. First, create your own repository where you wish to store your data. This can be in GitHub, GitLab, or locally git. If you want to follow along in this example, it's easiest just to create a test setup on your local machine like so:
 
