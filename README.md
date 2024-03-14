@@ -11,7 +11,7 @@ mkdir TinoPai
 cd TinoPai
 git init
 ```
-2. You may want to create some directories to store your configurations, inputs and outputs.
+2. You may want to create some directories to store your configurations, inputs and outputs. To make things a little different from KAPy, we have chosen to call our directories `inputs` and `outputs`.
 ```
 mkdir config
 mkdir inputs
@@ -39,7 +39,18 @@ module KAPy:
 use rule * from KAPy 
 ```
 
-7. 
+7. That's basically the core of it - everything else is handled in the same way as normal KAPy. The rest of the work is populating the repository. This repository processes the data used in the KAPy tutorials and which needs to be downloaded and installed before use, in this case in the `./inputs` directory - see [KAPy Tutorial 1](https://github.com/Klimaatlas/KAPy/blob/main/docs/tutorials/Tutorial01.md) for information on where to obtain this data. The configuration files (e.g. the `./config` directory) are configured to run analysis, taking account of the new directory structure - see the `dirs` tag in `./config/config.yaml`. We have also added a custom notebook in the directory `./scripts/Output_overview.py.ipynb` - this is a minor modification of the default notebook used in KAPy, but could clearly be any form of custom post-processing notebook.
+
+8. An important point to note is that the version of KAPy that is used in TinoPai is fixed, as part of the version control. If updates are made to the core KAPy workflow (e.g. on GitHub), these will not automatically propigate through to TinoPai, unless you explicitly ask for them. The way to do this is by first doing a pull in the KAPy directory. The change can then be made permanent by committing the changes e.g.
+```
+cd KAPy
+git pull
+cd ..
+git add KAPy
+git commit -m "Update KAPy to latest version"
+```
+
+9. That's it - you've got your own version of KAPy running locally, with everything you need under version control. *Tino pai*!
 
 
 ## More reading
