@@ -17,7 +17,7 @@ configurationTables:
     scenarios:  'config/scenarios.tsv'
     periods:  'config/periods.tsv'
     seasons: 'config/seasons.tsv'
-notebooks: 'workflow/notebooks/Output_overview.py.ipynb'
+notebooks: 'scripts/Output_overview.py.ipynb'
 
 # Configuration options------------------------------------
 arealstats:
