@@ -1,9 +1,8 @@
 # KAPy-local-example
-Example of using KAPy in a local setting
 
-# Creating your own local KAPy setup
+This repository provides a basic example of how the KAPy workflow can be used as part of a larger cliamte service project. 
 
-The assumption here is that you want to setup a installation of KAPy, with the local scripts and configuration under version control in another Git repository. The following steps describe how this `KAPy-local-example` repository was created.
+To start with, let us assume that we have want to setup our own climate serivce processing chain, using KAPy as the main engine, with our configuration and local scripts place under version control in Git. For the sake of argument, we will refer to this project as `TinoPai`. The follow steps describe how the repository that you can see here was setup - by reproducing them on your own machine, you should be able to create your own local configuration.
 
 1. First, create your own repository where you wish to store your data. This can be in GitHub, GitLab, or locally git. If you want to follow along in this example, it's easiest just to create a test setup on your local machine like so:
 
@@ -28,5 +27,6 @@ You can read lots more about exactly how Submodules work in Git here: https://gi
 ```
 git commit -m 'Add KAPy submodule'
 ```
+5. Now explore the `./KAPy` directory. You will see all of the content as you know it directly from KAPy, but now integrated directly into your own repository.
 
-5. 
+6. Unfortunately snakemake isn't able to work with this setup directly, so we need to tell it how to incorporate KAPy into TinoPai. 
