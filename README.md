@@ -29,4 +29,12 @@ git commit -m 'Add KAPy submodule'
 ```
 5. Now explore the `./KAPy` directory. You will see all of the content as you know it directly from KAPy, but now integrated directly into your own repository.
 
-6. Unfortunately snakemake isn't able to work with this setup directly, so we need to tell it how to incorporate KAPy into TinoPai. 
+6. Unfortunately snakemake isn't able to work with this setup directly, so we need to tell it how to incorporate KAPy into TinoPai. KAPy is structure so that it can be readily used with the Snakemake
+
+
+## More reading
+* [Snakemake modules](https://snakemake.readthedocs.io/en/stable/snakefiles/modularization.html#modules)
+* [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+
+## Why Tino Pai?
+Like KAPy, the name of this example repository is inspired by the *Te Reo Māori* language. Whereas *ka pai* (KAPy) can be translated as "good", *tino pai* is "very good" - reflecting the improvements that local customisations of KAPy should allow.
