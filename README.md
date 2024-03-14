@@ -1,4 +1,4 @@
-# KAPy-local-example
+# Tino Pai - a KAPy example repository
 
 This repository provides a basic example of how the KAPy workflow can be used as part of a larger cliamte service project. 
 
