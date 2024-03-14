@@ -29,7 +29,17 @@ git commit -m 'Add KAPy submodule'
 ```
 5. Now explore the `./KAPy` directory. You will see all of the content as you know it directly from KAPy, but now integrated directly into your own repository.
 
-6. Unfortunately snakemake isn't able to work with this setup directly, so we need to tell it how to incorporate KAPy into TinoPai. KAPy is structure so that it can be readily used with the Snakemake
+6. Unfortunately snakemake isn't able to work with this setup directly, so we need to tell it how to incorporate KAPy into TinoPai. We do this via a Snakefile, where KAPy is explicitly imported into the local workflow. Copy the following text into a file and save it as `Snakefile` in the root directory of the `TinoPai` repository (or alternatively, download it from here
+
+```Snakemake
+module KAPy:
+    snakefile:
+        "KAPy/workflow/Snakefile"
+
+use rule * from KAPy 
+```
+
+7. 
 
 
 ## More reading
