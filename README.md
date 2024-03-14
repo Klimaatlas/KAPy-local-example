@@ -22,5 +22,11 @@ mkdir outputs
 ```
 git submodule add https://github.com/Klimaatlas/KAPy.git
 ```
+You can read lots more about exactly how Submodules work in Git here: https://git-scm.com/book/en/v2/Git-Tools-Submodules We're not going to go into the details, other than to note that they do work very nicely for this application.
 
-4. 
+4. Commit the change
+```
+git commit -m 'Add KAPy submodule'
+```
+
+5. 
