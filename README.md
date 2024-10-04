@@ -19,7 +19,7 @@ mkdir outputs
 ```
 3. Now comes the key trick for integrating the pipeline - we add the KAPy repository as a git submodule, like so:
 ```
-git submodule add https://github.com/Klimaatlas/KAPy.git
+git submodule add git@github.com:Klimaatlas/KAPy.git
 ```
 You can read lots more about exactly how Submodules work in Git here: https://git-scm.com/book/en/v2/Git-Tools-Submodules We're not going to go into the details, other than to note that they do work very nicely for this application.
 
