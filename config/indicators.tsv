@@ -1,2 +1,5 @@
 id	name	units	variables	season	statistic	time_binning
-101	Annual mean temperature	K	tas	annual	mean	periods
+101-nocal	Annual mean temperature	K	tas	annual	mean	years
+101-scaling	Annual mean temperature	K	tas-scaling	annual	mean	years
+101-eqm	Annual mean temperature	K	tas-eqm	annual	mean	years
+101-dqm	Annual mean temperature	K	tas-dqm	annual	mean	years
