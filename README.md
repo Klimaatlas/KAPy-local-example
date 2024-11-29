@@ -35,10 +35,11 @@ git commit -m 'Add KAPy submodule'
 configfile: "./config/config.yaml"
 
 module KAPy:
+    config: config
     snakefile:
         "KAPy/workflow/Snakefile"
 
-use rule * from KAPy 
+use rule * from KAPy
 ```
 
 7. That's basically the core of it - everything else is handled in the same way as normal KAPy. The rest of the work is populating the repository. This repository processes the data used in the KAPy tutorials and which needs to be downloaded and installed before use, in this case in the `./inputs` directory - see [KAPy Tutorial 1](https://github.com/Klimaatlas/KAPy/blob/main/docs/tutorials/Tutorial01.md) for information on where to obtain this data. The configuration files (e.g. the `./config` directory) are configured to run analysis, taking account of the new directory structure - see the `dirs` tag in `./config/config.yaml`. We have also added a custom notebook in the directory `./scripts/Output_overview.py.ipynb` - this is a minor modification of the default notebook used in KAPy, but could clearly be any form of custom post-processing notebook.
