@@ -1,8 +1,31 @@
 # Tino Pai - a KAPy example repository
 
-This repository provides a basic example of how the [KAPy workflow](https://github.com/Klimaatlas/KAPy/) can be used as part of a larger cliamte service project. 
+This repository provides a basic example of how the [KAPy workflow](https://github.com/Klimaatlas/KAPy/) can be used as part of a larger climate service project. 
 
-To start with, let us assume that we have want to setup our own climate serivce processing chain, using [KAPy](https://github.com/Klimaatlas/KAPy/) as the main engine, with our configuration and local scripts place under version control in Git. For the sake of argument, we will refer to this project as `TinoPai`. The follow steps describe how the repository that you can see here was setup - by reproducing them on your own machine, you should be able to create your own local configuration.
+The following documentation provides to approaches to using this repository. The first, 'Quick Start', makes a local copy of the repository that can be used to get up and running as quickly as possible. Alternatively, 'Custom Configuration' shows how to create a fully customised instance of a pipeline using KAPy.
+
+# Quick Start
+
+This configuration approach makes a direct copy of TinoPai into a local directory. 
+
+1. Start by cloning the respository using http. 
+```
+git clone --recurse-submodules https://github.com/Klimaatlas/TinoPai.git
+```
+
+Some notes
+* You won't be able to push changes back to the main TinoPai repository (as it is ready only), although you can still make changes and track them in the local repository. If you want to push to another remote repository, you will need to configure this manually.
+* You may need to update the version of KAPy being using, as TinoPai is (by design) fixed to a specific version. The following will bring the local version up to date with the main branch of KAPy:
+```
+cd TinoPai/KAPy
+git checkout main
+git pull
+```
+
+
+# Custom Configuration
+
+To start with, let us assume that we want to setup our own climate serivce processing chain, using [KAPy](https://github.com/Klimaatlas/KAPy/) as the main engine, with our configuration and local scripts place under version control in Git. For the sake of argument, we will refer to this project as `TinoPai`. The follow steps describe how the repository that you can see here was setup - by reproducing them on your own machine, you should be able to create your own local configuration.
 
 1. First, create your own repository where you wish to store your data. This can be in GitHub, GitLab, or locally git. If you want to follow along in this example, it's easiest just to create a test setup on your local machine like so:
 
@@ -11,7 +34,7 @@ mkdir TinoPai
 cd TinoPai
 git init
 ```
-2. You may want to create some directories to store your configurations, inputs and outputs. To make things a little different from KAPy, we have chosen to call our directories `inputs` and `outputs`.
+2. You may want to create some directories to store your configurations, inputs and outputs. 
 ```
 mkdir config
 mkdir inputs
@@ -42,7 +65,7 @@ module KAPy:
 use rule * from KAPy
 ```
 
-7. That's basically the core of it - everything else is handled in the same way as normal KAPy. The rest of the work is populating the repository. This repository processes the data used in the KAPy tutorials and which needs to be downloaded and installed before use, in this case in the `./inputs` directory - see [KAPy Tutorial 1](https://github.com/Klimaatlas/KAPy/blob/main/docs/tutorials/Tutorial01.md) for information on where to obtain this data. The configuration files (e.g. the `./config` directory) are configured to run analysis, taking account of the new directory structure - see the `dirs` tag in `./config/config.yaml`. We have also added a custom notebook in the directory `./scripts/Output_overview.py.ipynb` - this is a minor modification of the default notebook used in KAPy, but could clearly be any form of custom post-processing notebook.
+7. That's basically the core of it - everything else is handled in the same way as normal KAPy. The rest of the work is populating the repository. This repository processes the data used in the KAPy tutorials and which needs to be downloaded and installed before use, in this case in the `./inputs` directory - see [KAPy Tutorial 1](https://github.com/Klimaatlas/KAPy/blob/main/docs/tutorials/Tutorial01.md) for information on where to obtain this data. The configuration files (e.g. the `./config` directory) are configured to run analysis, taking account of the new directory structure - see the `dirs` tag in `./config/config.yaml`. 
 
 8. An important point to note is that the version of KAPy that is used in TinoPai is fixed, as part of the version control. If updates are made to the core KAPy workflow (e.g. on GitHub), these will not automatically propigate through to TinoPai, unless you explicitly ask for them. The way to do this is by first doing a pull in the KAPy directory. The change can then be made permanent by committing the changes e.g.
 ```
